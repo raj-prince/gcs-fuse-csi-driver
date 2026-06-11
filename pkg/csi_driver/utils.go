@@ -89,6 +89,7 @@ const (
 	MultiNICMinVersion                     = "v1.22.2-gke.0"
 	SidecarAutoGoMemLimitMinVersion        = "v1.23.11-gke.0"
 	StorageEndpointInternalMinVersion      = "v1.23.14-gke.0"
+	GCSFuseGKENewClusterMinVersion         = "v1.25.0-gke.0"
 	FlagFileForDefaultingPath              = "flags-for-defaulting"
 	GCSFuseProfileFlag                     = "profile"
 	LocalSocketAddressArg                  = "experimental-local-socket-address"
