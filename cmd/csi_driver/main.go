@@ -74,6 +74,7 @@ var (
 	enableAutoGoMemLimit           = flag.Bool("enable-auto-gomemlimit", false, "Automatically set GOMEMLIMIT to a percentage of the container's cgroup memory limit.")
 	autoGoMemLimitRatio            = flag.Float64("auto-gomemlimit-ratio", util.GoMemLimitCgroupPercentage, "The ratio of the container's cgroup memory limit to set as GOMEMLIMIT when enable-auto-gomemlimit is enabled.")
 	universeDomain                 = flag.String("universe-domain", "googleapis.com", "The universe domain. The default value is googleapis.com.")
+	isClusterCreateRequest         = flag.Bool("is-cluster-create-request", false, "Identify if this is a cluster create request.")
 
 	// GCSFuse kernel params feature.
 	enableGCSFuseKernelParams = flag.Bool("enable-gcsfuse-kernel-params", false, "Enable gcsfuse kernel params feature.")
@@ -293,6 +294,7 @@ func main() {
 		FeatureOptions:                 featureOptions,
 		AssumeGoodSidecarVersion:       *assumeGoodSidecarVersion,
 		UniverseDomain:                 *universeDomain,
+		IsClusterCreateRequest:         *isClusterCreateRequest,
 	}
 
 	gcfsDriver, err := driver.NewGCSDriver(config, recorder)

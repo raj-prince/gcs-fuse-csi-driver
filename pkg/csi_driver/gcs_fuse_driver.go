@@ -75,6 +75,7 @@ type GCSDriverConfig struct {
 	FeatureOptions                 *GCSDriverFeatureOptions
 	AssumeGoodSidecarVersion       bool
 	UniverseDomain                 string
+	IsClusterCreateRequest         bool
 }
 
 type GCSDriver struct {
